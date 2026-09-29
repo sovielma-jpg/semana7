@@ -1,19 +1,23 @@
 package modelo;
 
 public class Repartidor {
+    private int id;
     private String nombre;
 
-    public Repartidor(String nombre) {
+    public Repartidor(int id, String nombre) {
+        this.id = id;
         this.nombre = nombre;
     }
 
-    // Getter
-    public String getNombre() {
-        return nombre;
-    }
+    // Getters y Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    // Setter
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    @Override
+    public String toString() {
+        return id + " - " + nombre;
     }
 }
